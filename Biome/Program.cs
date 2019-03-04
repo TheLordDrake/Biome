@@ -2,11 +2,13 @@
 
 namespace Biome
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var world = new World(20, 40);
+            world.PrintMap();
+            world.CheckSurroundingTerrainForMatch(2, 2);
         }
     }
 }
